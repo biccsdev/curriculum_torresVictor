@@ -1,0 +1,255 @@
+:root {
+    --ash-gray: #cad2c5ff;
+    --cambridge-blue: #84a98cff;
+    --hookers-green: #52796fff;
+    --dark-slate-gray: #354f52ff;
+    --charcoal: #2f3e46ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background: linear-gradient(135deg, var(--cambridge-blue) 0%, var(--hookers-green) 100%);
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(202, 210, 197, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(47, 62, 70, 0.2);
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: var(--charcoal);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+header img {
+    border-radius: 50%;
+    border: 4px solid var(--hookers-green);
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+header a {
+    color: var(--hookers-green);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: var(--dark-slate-gray);
+    text-decoration: underline;
+}
+
+nav {
+    background: rgba(202, 210, 197, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(47, 62, 70, 0.15);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--charcoal);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--hookers-green);
+    color: var(--ash-gray);
+    transform: translateY(-2px);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    background: rgba(202, 210, 197, 0.95);
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(47, 62, 70, 0.15);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    color: var(--charcoal);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--hookers-green);
+    padding-bottom: 0.5rem;
+}
+
+section h3 {
+    color: var(--hookers-green);
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+section p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+section ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+section li {
+    margin-bottom: 0.5rem;
+    color: var(--dark-slate-gray);
+}
+
+section a {
+    color: var(--hookers-green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section a:hover {
+    color: var(--dark-slate-gray);
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: var(--ash-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(47, 62, 70, 0.15);
+}
+
+table th {
+    background: var(--hookers-green);
+    color: var(--ash-gray);
+    padding: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+table td {
+    padding: 1rem;
+    border: 1px solid var(--cambridge-blue);
+    text-align: center;
+    vertical-align: top;
+    color: var(--charcoal);
+}
+
+table tr:nth-child(even) {
+    background: rgba(132, 169, 140, 0.3);
+}
+
+table tr:hover {
+    background: rgba(82, 121, 111, 0.2);
+    transition: background 0.3s ease;
+}
+
+footer {
+    background: var(--charcoal);
+    color: var(--ash-gray);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+footer p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    table th,
+    table td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+}
