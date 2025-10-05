@@ -203,6 +203,80 @@ footer p {
     font-weight: 500;
 }
 
+section h2::before {
+    content: "▎";
+    color: var(--hookers-green);
+    margin-right: 0.5rem;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.2rem;
+    height: 2px;
+    background: var(--hookers-green);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+section ul li::marker {
+    color: var(--hookers-green);
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--hookers-green);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+nav a:active {
+    transform: translateY(0);
+    filter: brightness(0.9);
+}
+
+section li:first-child {
+    font-weight: 600;
+}
+
+section li:last-child {
+    margin-bottom: 0;
+}
+
+#intereses {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+#intereses h2 {
+    grid-column: 1 / -1;
+}
+
+section article {
+    border: 1px solid var(--cambridge-blue);
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(132, 169, 140, 0.15);
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -228,6 +302,16 @@ footer p {
     table th,
     table td {
         padding: 0.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        text-align: left;
+    }
+    header img {
+        float: left;
+        margin: 0 1.5rem 1rem 0;
     }
 }
 
